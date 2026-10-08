@@ -46,10 +46,8 @@ Pour l'activer : **Settings → Pages → Build and deployment**, puis Source «
 
 La page `mentions-legales.html` contient l'éditeur, l'hébergeur (GitHub, Inc.), la propriété intellectuelle et les données personnelles.
 
-## À vérifier avant la mise en ligne
+## Points restants
 
-- **Téléphone** : le +33 (0)4 94 01 23 45 suit le motif « 01 23 45 », souvent utilisé comme numéro fictif. Il faut le confirmer.
-- **Effectif** : le site indique « près de 70 collaborateurs ». Les registres publics indiquent 20 à 49 salariés, mais ce chiffre date de 2022.
 - **Easymed** : le lien pointe vers https://easymed.market, qui affiche aujourd'hui une page d'erreur vue de l'extérieur.
-- **Mentions légales** : il reste à compléter le directeur de la publication et l'e-mail de contact. Il faut aussi ajouter le téléphone de l'hébergeur, que la LCEN demande et que GitHub ne publie pas clairement.
-- **Formulaire** : le site n'en a volontairement aucun. Le contact se fait par téléphone et l'adresse est indiquée. On pourra en ajouter un quand un e-mail ou un outil de réception sera choisi.
+- **Téléphone de l'hébergeur** : la LCEN demande le téléphone de l'hébergeur, que GitHub ne publie pas clairement. La page renvoie pour l'instant vers support.github.com.
+- **Formulaire** : le site n'en a volontairement aucun. Le contact se fait par téléphone ou par e-mail.

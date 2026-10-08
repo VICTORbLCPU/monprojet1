@@ -246,6 +246,7 @@ address { font-style: normal; }
 }
 .link:hover { text-decoration-color: currentColor; }
 .link--strong { font-size: 18px; text-decoration: none; }
+.link--email { overflow-wrap: anywhere; }
 
 /* --------------------------------------------------------------------------
    Navigation
