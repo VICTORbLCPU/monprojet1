@@ -119,7 +119,7 @@
     DATA.forEach(function (d, i) {
       var cx = m.l + band * i + band / 2;
       var top = y(d.ca), base = y(0), r = 4, x0 = cx - bw / 2;
-      var g = el("g", { class: "bar-group" }, svg);
+      var g = el("g", { class: "bar-group", style: "--i:" + i }, svg);
       el("path", {
         class: "bar",
         d: "M" + x0 + "," + base +
@@ -155,25 +155,5 @@
         renderChart();
       }
     }).observe(chart);
-  }
-
-  /* ---------- Apparition au défilement ---------- */
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var targets = document.querySelectorAll(
-    ".section__head, .split__text, .code-card, .card, .products__list, .timeline, .mission__card, .values, .stats, .awards, .accreditation, .easymed-card"
-  );
-  if (!reduce && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    targets.forEach(function (t) {
-      t.classList.add("reveal");
-      io.observe(t);
-    });
   }
 })();

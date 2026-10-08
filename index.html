@@ -15,6 +15,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+  <script>
+    /* Active les animations avant le premier rendu ; repli si motion.js ne se charge pas. */
+    (function (d) {
+      d.classList.add("js");
+      if (window.matchMedia && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        d.classList.add("motion");
+        setTimeout(function () { if (!d.classList.contains("motion-ready")) d.classList.remove("motion"); }, 2500);
+      }
+    })(document.documentElement);
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -129,7 +140,13 @@
                 <path d="M515 156 Q 650 90 774 197"/>
                 <path d="M515 156 Q 720 170 869 374"/>
               </g>
-              <g fill="#111a4a">
+              <g class="map__comets" fill="none" stroke="#44b48b" stroke-width="3" stroke-linecap="round">
+                <path pathLength="1" style="--c:0" d="M515 156 Q 390 60 272 172"/>
+                <path pathLength="1" style="--c:1" d="M515 156 Q 548 210 554 286"/>
+                <path pathLength="1" style="--c:2" d="M515 156 Q 650 90 774 197"/>
+                <path pathLength="1" style="--c:3" d="M515 156 Q 720 170 869 374"/>
+              </g>
+              <g class="map__ends" fill="#111a4a">
                 <circle cx="272" cy="172" r="4"/><circle cx="554" cy="286" r="4"/><circle cx="774" cy="197" r="4"/><circle cx="869" cy="374" r="4"/>
               </g>
               <circle class="map__pulse" cx="515" cy="156" r="7" fill="none" stroke="#111a4a" stroke-width="2"/>
@@ -165,6 +182,7 @@
           </div>
         </div>
       </div>
+      <a class="scroll-cue" href="#entreprise" aria-label="Faire défiler vers la suite"><span></span></a>
     </section>
 
     <!-- RECONNAISSANCES -->
@@ -539,8 +557,10 @@
       <p>Siège social&nbsp;: ZI Saint-Martin, 594 chemin de la Source, 83400 Hyères, France</p>
       <p>© <span id="year">2026</span> Intermed Exportation. Easymed est une marque déposée.</p>
     </div>
+    <p class="footer__mega" aria-hidden="true">Intermed</p>
   </footer>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/motion.js" defer></script>
 </body>
 </html>
