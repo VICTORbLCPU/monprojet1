@@ -21,18 +21,21 @@
     toggle.querySelector(".sr-only").textContent = open ? "Fermer le menu" : "Ouvrir le menu";
     toggle.querySelector("use").setAttribute("href", open ? "#i-close" : "#i-menu");
   }
-  toggle.addEventListener("click", function () {
-    setMenu(!nav.classList.contains("is-open"));
-  });
-  links.addEventListener("click", function (e) {
-    if (e.target.closest("a")) setMenu(false);
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && nav.classList.contains("is-open")) {
-      setMenu(false);
-      toggle.focus();
-    }
-  });
+  // La page des mentions légales n'a pas de menu déroulant.
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      setMenu(!nav.classList.contains("is-open"));
+    });
+    links.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setMenu(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+  }
 
   /* ---------- Année du pied de page ---------- */
   var year = document.getElementById("year");

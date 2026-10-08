@@ -23,7 +23,13 @@ python3 -m http.server 8000
 # puis ouvrir http://localhost:8000
 ```
 
-On peut aussi le publier tel quel sur GitHub Pages, Netlify ou n'importe quel hébergement statique.
+## Mise en ligne (GitHub Pages)
+
+Le site est publié depuis la branche `main`, à la racine du dépôt. Le fichier `.nojekyll` demande à GitHub de servir les fichiers tels quels.
+
+Adresse : https://victorblcpu.github.io/monprojet1/
+
+Pour l'activer : **Settings → Pages → Build and deployment**, puis Source « Deploy from a branch », branche `main`, dossier `/ (root)`, et **Save**.
 
 ## Sections
 
@@ -36,12 +42,14 @@ On peut aussi le publier tel quel sur GitHub Pages, Netlify ou n'importe quel h�
 7. Chiffres clés : chiffres 2024, graphique et tableau de 2021 à 2024
 8. Engagements : raison d'être, valeurs, engagements, distinctions
 9. Gouvernance
-10. Contact et mentions d'identité légale dans le pied de page
+10. Contact, avec l'identité légale dans le pied de page
+
+La page `mentions-legales.html` contient l'éditeur, l'hébergeur (GitHub, Inc.), la propriété intellectuelle et les données personnelles.
 
 ## À vérifier avant la mise en ligne
 
 - **Téléphone** : le +33 (0)4 94 01 23 45 suit le motif « 01 23 45 », souvent utilisé comme numéro fictif. Il faut le confirmer.
 - **Effectif** : le site indique « près de 70 collaborateurs ». Les registres publics indiquent 20 à 49 salariés, mais ce chiffre date de 2022.
 - **Easymed** : le lien pointe vers https://easymed.market, qui affiche aujourd'hui une page d'erreur vue de l'extérieur.
-- **Mentions légales** : il manque le directeur de la publication, l'hébergeur et un e-mail de contact, obligatoires selon la LCEN.
+- **Mentions légales** : il reste à compléter le directeur de la publication et l'e-mail de contact. Il faut aussi ajouter le téléphone de l'hébergeur, que la LCEN demande et que GitHub ne publie pas clairement.
 - **Formulaire** : le site n'en a volontairement aucun. Le contact se fait par téléphone et l'adresse est indiquée. On pourra en ajouter un quand un e-mail ou un outil de réception sera choisi.
